@@ -3,7 +3,7 @@ using FlightBookingSystem.Notifications.Core.Entities;
 using FlightBookingSystem.Notifications.Core.Repositories;
 using System.Data;
 
-namespace FlightBookingSystem.Notifications.Infrastructure
+namespace FlightBookingSystem.Notifications.Infrastructure.Repositories
 {
     public class NotificationRepository : INotificationRepository
     {

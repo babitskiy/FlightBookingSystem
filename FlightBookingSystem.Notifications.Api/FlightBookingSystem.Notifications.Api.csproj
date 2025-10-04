@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="13.0.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FlightBookingSystem.Notifications.Application\FlightBookingSystem.Notifications.Application.csproj" />
     <ProjectReference Include="..\FlightBookingSystem.Notifications.Core\FlightBookingSystem.Notifications.Core.csproj" />
     <ProjectReference Include="..\FlightBookingSystem.Notifications.Infrastructure\FlightBookingSystem.Notifications.Infrastructure.csproj" />
   </ItemGroup>
