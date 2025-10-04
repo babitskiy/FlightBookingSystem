@@ -1,8 +1,10 @@
-﻿namespace FlightBookingSystem.Payments.Core.Repositories
+﻿using FlightBookingSystem.Payments.Core.Entities;
+
+namespace FlightBookingSystem.Payments.Core.Repositories
 {
     public interface IPaymentRepository
     {
-        Task ProcessPaymentAsync(Guid id);
+        Task ProcessPaymentAsync(Payment payment);
         Task RefundPaymentAsync(Guid id);
     }
 }
