@@ -7,10 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.5.4" />
     <PackageReference Include="MediatR" Version="13.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FlightBookingSystem.BuildingBlocks\FlightBookingSystem.BuildingBlocks.csproj" />
     <ProjectReference Include="..\FlightBookingSystem.Payments.Core\FlightBookingSystem.Payments.Core.csproj" />
   </ItemGroup>
 
