@@ -5,6 +5,7 @@ using FlightBookingSystem.Bookings.Infrastructure.Repositories;
 using FlightBookingSystem.BuildingBlocks.Common;
 using MassTransit;
 using Microsoft.Data.SqlClient;
+using StackExchange.Redis;
 using System.Data;
 using System.Reflection;
 
@@ -45,9 +46,10 @@ builder.Services.AddMassTransit(config =>
     });
 });
 
-// Add SQL Connection
-builder.Services.AddScoped<IDbConnection>(sp =>
-    new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
+// Redis
+var redisConfiguration = builder.Configuration["CacheSettings:ConnectionString"];
+var redis = ConnectionMultiplexer.Connect(redisConfiguration);
+builder.Services.AddSingleton<IConnectionMultiplexer>(redis);
 
 var app = builder.Build();
 
