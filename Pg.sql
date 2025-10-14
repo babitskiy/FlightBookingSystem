@@ -1,0 +1,6 @@
+CREATE TABLE Payments (
+    Id UUID PRIMARY KEY,
+    BookingId UUID NOT NULL,
+    Amount DECIMAL(10, 2) NOT NULL,
+    PaymentDate TIMESTAMP NOT NULL
+);

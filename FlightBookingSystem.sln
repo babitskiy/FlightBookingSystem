@@ -49,6 +49,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightBookingSystem.Payment
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightBookingSystem.BuildingBlocks", "FlightBookingSystem.BuildingBlocks\FlightBookingSystem.BuildingBlocks.csproj", "{FA36297B-257F-425D-8D4C-BE3D1CE38EC7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prerequisites", "Prerequisites", "{FFA79BCE-3A08-4ACA-94AA-F737BC5174FB}"
+	ProjectSection(SolutionItems) = preProject
+		flights.json = flights.json
+		Pg.sql = Pg.sql
+		SchemaAndData.sql = SchemaAndData.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
